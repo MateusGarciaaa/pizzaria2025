@@ -1,159 +1,140 @@
-/* Reset básico */
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
-   }
-   
-   
-   body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    background-color: #ffd9b3; /* creme claro */
-    color: #2c1a1a; /* marrom escuro suave */
-   }
-   
-   
-   header {
-    background-color: #8b0000; /* vermelho escuro */
-    padding: 1rem 0;
-   }
-   
-   
-   nav ul {
-    display: flex;
-    justify-content: center;
+    margin: 0;
+    padding:0;
+
+}
+
+
+/* Somente declaração de variáveis, geralmente trabalha com 4 cores e é interessante declarar
+para nao precisar mudar a mesma cor repetidas vezes */
+:root{
+    --color-primary: #ffa500;
+    --color-dark: #232323;
+    --color-light: #eaeaea;
+    --collor-white: #fff
+}
+
+
+html {
+    /* Fazer a barra de rolagem rolar mais suave(smooth) para todo o arquivo html */
+    scroll-behavior: smooth;
+
+
+}
+
+a{
+    color:var(--color-primary)
+}
+
+header {
+    background-color: var(--color-dark);
+    color: var(--collor-white);
+    /* padding (apertar f12 no navegador para ver onde é) */
+    padding: 1.5rem 0;
+}
+
+nav ul{
     list-style: none;
-   }
-   
-   
-   nav ul li {
-    margin: 0 15px;
-   }
-   
-   
-   nav ul li a {
-    color: #fffaf5;
+    text-align:center;
+    text-decoration: none;
+    font-weight: 700;
+
+}
+
+nav li{
+    display: inline;
+    margin: 0 1.5rem;
+
+}
+
+nav a{
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s;
-   }
-   
-   
-   nav ul li a:hover {
-    color: #ffd700; /* dourado */
-   }
-   
-   
-   .hero {
-    background: url('img/pexels-engin-akyurt-2260208.jpg') center/cover no-repeat;
-    color: white;
+    font-weight: 700;
+
+}
+
+.hero{
+
+    background-image: url(img/pexels-eneida-nieves-15668737.jpg);
+    background-size: cover;
+    color: var(--color-dark)
+    min-height: 75vh;
+    padding: 10rem 0;
     text-align: center;
-    padding: 5rem 2rem;
-    background-attachment: fixed;
-    background-color: rgba(139, 0, 0, 0.5);
-    background-blend-mode: darken;
-   }
-   
-   
-   .hero h1 {
+
+}
+
+.hero h1{
+    font-size: 4rem;
+    font-weight: 100;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+
+}
+
+section:not(#home){
+    padding: 4rem;
+    text-align: center;
+
+}
+
+h2 {
     font-size: 3rem;
-    margin-bottom: 1rem;
-   }
-   
-   
-   .hero p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-   }
-   
-   
-   .cta-button {
-    background-color: #ff6347; /* tomate */
-    color: white;
-    padding: 0.75rem 1.5rem;
-    font-weight: bold;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s;
-   }
-   
-   
-   .cta-button:hover {
-    background-color: #e5533d;
-   }
-   
-   
-   section {
-    padding: 4rem 2rem;
-    text-align: center;
-   }
-   
-   
-   h2 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    color: #8b0000;
-   }
-   
-   
-   .menu-list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);  gap: 2rem;
-    padding: 0;
+    margin-bottom:  1.5rem;
+
+}
+
+p{
+    font-size: 1.25rem;
+
+}
+
+.menu-list{
     list-style: none;
-   }
-   
-   
-   .menu-list li {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-    overflow: hidden;
-    transition: transform 0.3s;
-   }
-   
-   
-   .menu-list li:hover {
-    transform: translateY(-5px);
-   }
-   
-   
-   .menu-list img {
-    width: 100%;
-    height: 200px;
+
+}
+
+.menu-list > li {
+    background-color: var(--color-light);
+    border-radius: .5rem;
+    box-shadow: 0 4px 12px -4px rgba(0, 0, 0, 0.5);
+    margin: 1.5;
+    display: inline-block;
+    height: 28rem;
+    width: 28rem;
+    text-align: left;
+
+}
+
+.menu-list img {
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
     object-fit: cover;
-   }
-   
-   
-   .menu-list h3 {
-    margin: 1rem 0 0.5rem;
-    color: #b22222; /* vermelho telha */
-   }
-   
-   
-   .menu-list p {
-    padding: 0 1rem 1rem;
-    font-size: 0.95rem;
-   }
-   
-   
-   #about, #contact {
-    background-color: #fff0eb; /* creme rosado */
-   }
-   
-   
-   address {
-    font-style: normal;
-    margin-top: 1rem;
-   }
-   
-   
-   footer {
-    background-color: #8b0000;
-    color: #fffaf5;
-    text-align: center;
-    padding: 1rem 0;
-    font-size: 0.9rem;
-   }
-   
+    width: 100%;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body{
+    font: 100;
+
+}
+
